@@ -1,5 +1,62 @@
-body {
-    background-color: #FFF1E0;
-}
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+$blanc: #fff;
+$orangeclair: #F0BA6C;
+$orange: #E19417;
+$bleuclair: #B2CED7;
+$bleu: #077189;
+$bleufonce: #053E44;
+
+$titre: "acier-bat-solid", sans-serif;
+$sous-titre: "itc-avant-garde-gothic-pro", sans-serif;
+$texte: "itc-avant-garde-gothic-pro", sans-serif;
+
+
+
+body {
+    margin: 0;
+    background: rgb(178, 206, 208);
+    background: linear-gradient(180deg, rgba(178, 206, 208, 1) 29%, rgba(7, 113, 137, 1) 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+header {
+    margin-top: 50px;
+
+    a {
+        position: fixed;
+    }
+}
+
+.hero {
+    .contenu {
+        // background-color: lightpink;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            // background-color: lightgreen;
+            font-family: $titre;
+            font-size: 5rem;
+            color: $blanc;
+            margin-top: 50px;
+        }
+
+        .bat {
+            background-color: lightgray;
+            width: 50%;
+            height: 500px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $orangeclair
+        }
+
+    }
+}
+
 @import "mobile";
