@@ -48,7 +48,7 @@ header {
         }
 
         .bat {
-            background-color: lightgray;
+            // background-color: lightgray;
             width: 50%;
             height: 500px;
         }
@@ -62,7 +62,14 @@ header {
 
 .etages {
     // background-color: lightpink;
-
+.nav{
+    justify-content: space-between;
+    .titre{
+        display: flex;
+       img{
+        margin-right: 10px;
+       }
+    }
     .filtre {
         display: flex;
         justify-content: flex-end;
@@ -70,23 +77,28 @@ header {
 
         .btn {
             // background-color: $bleuclair;
+            height: 40px;
             color: $blanc;
             border: 2px solid $bleu;
             border-radius: 20px;
             margin-left: 10px;
             box-shadow: 3px 4px 0px 0 $bleufonce;
         }
+
+
+    }
     }
 
     .contenu-etage {
         display: flex;
-
         .img-etage {
             display: flex;
             flex-direction: column;
             // background-color: lightgray;
-            width: 100%;
+            // width: 100%;
             position: sticky;
+            box-shadow: 20px 15px 0px 0px $bleufonce;
+            border-radius: 20px;
 
             img {
                 max-height: 80vh;
@@ -97,13 +109,14 @@ header {
 
         .etage-texte {
             // background-color: $bleu;
-            margin-left: 30px;
+            // margin-left: 30px;
+            margin-top: 70px;
             padding: 10px;
             width: 30%;
             height: 150px;
-            border: $blanc solid 2px;
+            // border: $blanc solid 2px;
             border-radius: 20px;
-            box-shadow: 4px 6px 0px 0 $bleufonce;
+            // box-shadow: 4px 6px 0px 0 $bleufonce;
 
         }
     }
