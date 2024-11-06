@@ -91,6 +91,7 @@ header {
 
     .contenu-etage {
         display: flex;
+        justify-content: space-between;
         .img-etage {
             display: flex;
             flex-direction: column;
