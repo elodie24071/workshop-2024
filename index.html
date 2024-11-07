@@ -36,34 +36,35 @@
  
     <section class="etages">
         <div class="container" id="container">
-            <!-- <div class="nav">
+ 
+            <div class="nav">
                 <div class="titre">
                     <img src="https://placehold.co/120x150" alt="">
-                    <h1>rez de chaussée</h1>
+                    <h1 class="nom">rez de chaussée</h1>
                 </div>
             <div class="filtre">
-                <button class="btn">Etage 1</button>
-                <button class="btn">Etage 2</button>
-                <button class="btn">Etage 3</button>
-                <button class="btn">Etage 4</button>
-                <button class="btn">Etage 5</button>
+                <button class="btn rdc" id="rdc">rdc</button>
+                <button class="btn un" id="btn1">Etage 1</button>
+                <button class="btn deux" id="btn2">Etage 2</button>
+                <button class="btn trois" id="btn3">Etage 3</button>
+                <button class="btn quatre" id="btn4">Etage 4</button>
+                <button class="btn ciq" id="btn5">Etage 5</button>
             </div>
             </div>
  
             <div class="contenu-etage">
 
                 <div class="etage-texte">
-                    <h2>sous-titre</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
                 </div>
 
                 
 
                 <div class="img-etage">
-                    <img src="https://placehold.co/600x400" alt="">
+                    <canvas id="canvas3d"></canvas>
                 </div>
  
-            </div> -->
+            </div>
         </div>
     </section>
  
@@ -87,6 +88,78 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="js/scripts.js"></script>
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.36/build/spline-viewer.js"></script>
+
+
+
+
+
+    <script type="module">
+         import { Application } from 'https://unpkg.com/@splinetool/runtime@latest/build/runtime.js';
+ 
+ const canvas = document.getElementById('canvas3d');
+ const app = new Application(canvas);
+
+ app.load('https://prod.spline.design/ZdnaqhACBPH0LU8c/scene.splinecode')
+     .then(() => {
+         const button = document.getElementById('rdc');
+         const button2 = document.getElementById('btn2');
+         const button1 = document.getElementById('btn1');
+         const button3 = document.getElementById('btn3');
+         const button4 = document.getElementById('btn4');
+         const button5 = document.getElementById('btn5');
+
+         button2.addEventListener('click', () => {
+             // Trigger the transition on 'Cube 8'
+     
+             app.emitEvent('mouseDown', '3ffa124c-5b4a-4cbd-8d55-47372ebe4c9d');
+           
+         });
+
+         button.addEventListener('click', () => {
+             // Trigger the transition on 'Cube 8'
+     
+             app.emitEvent('mouseDown', 'c8bac676-1b0f-457b-bd08-ae32b852fb15');
+         
+           
+         });
+
+         button3.addEventListener('click', () => {
+             // Trigger the transition on 'Cube 8'
+     
+             app.emitEvent('mouseDown', 'a7a541ae-f647-460f-8e99-79062f44b81e');
+         
+           
+         });
+
+         button4.addEventListener('click', () => {
+             // Trigger the transition on 'Cube 8'
+     
+             app.emitEvent('mouseDown', '8db588e8-26ac-48d8-a05c-0520455f165a');
+         
+           
+         });
+
+         button5.addEventListener('click', () => {
+             // Trigger the transition on 'Cube 8'
+     
+             app.emitEvent('mouseDown', '7b2ab441-674c-4b0c-80eb-b4eda90c2eb4');
+         
+           
+         });
+
+         button1.addEventListener('click', () => {
+             // Trigger the transition on 'Cube 8'
+     
+             app.emitEvent('mouseDown', '760c86e7-3953-412a-9e87-ee02ac7ca17e');
+         
+           
+         });
+         
+     });
+    </script>
+
+
+
 </body>
  
 </html>

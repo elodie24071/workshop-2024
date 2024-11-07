@@ -129,4 +129,33 @@ footer {
     }
 }
 
+
+
+
+// filtre
+.texte-transition, .img-transition {
+    transition: all 0.5s ease-in-out;
+}
+
+.hide .texte-transition {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.hide .img-transition {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.show .texte-transition {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.show .img-transition {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
 @import "mobile";
